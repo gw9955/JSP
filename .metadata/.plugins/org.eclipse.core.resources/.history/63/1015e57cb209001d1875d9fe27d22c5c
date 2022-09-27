@@ -1,0 +1,22 @@
+package work;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+
+public class Lotto {
+	private Scanner scan;
+	scan = new Scanner(System.in);
+	
+	
+	public void displayMenu() {
+		System.out.println();
+		System.out.println("==========================");
+		System.out.println("Lotto 프로그램");
+		System.out.println("--------------------------");
+		System.out.println("1. Lotto 구입");
+		System.out.println("2. 프로그램 종료");
+		System.out.print("==========================");
+	}
+}

@@ -1,0 +1,11 @@
+package work;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+
+public class Lotto {
+	private Scanner scan;
+	
+}

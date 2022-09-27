@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>유튜브 넣어보자</h1>
+    <input type="button" value="다음노래" onclick="f_next()">
+    선택하세요<br>
+    인생플리1<input type="radio" name="nm_musicismylife" value="" onclick="f_sel(0)">
+    인생플리2<input type="radio" name="nm_musicismylife" value="" onclick="f_sel(1)">
+    인생플리3<input type="radio" name="nm_musicismylife" value="" onclick="f_sel(2)">
+    인생플리4<input type="radio" name="nm_musicismylife" value="" onclick="f_sel(3)">
+    인생플리5<input type="radio" name="nm_musicismylife" value="" onclick="f_sel(4)">
+    인생플리6<input type="radio" name="nm_musicismylife" value="" onclick="f_sel(5)">
+    인생플리7<input type="radio" name="nm_musicismylife" value="" onclick="f_sel(6)">
+    인생플리8<input type="radio" name="nm_musicismylife" value="" onclick="f_sel(7)">
+
+    <select id = "id_sel" onchange="f_sel2()">
+        <option value="-1" selected>일단 잡숴봐</option>
+        <option value="0">인생플리1</option>
+        <option value="1">인생플리2</option>
+        <option value="2">인생플리3</option>
+        <option value="3">인생플리4</option>
+        <option value="4">인생플리5</option>
+        <option value="5">인생플리6</option>
+        <option value="6">인생플리7</option>
+        <option value="7">인생플리8</option>
+    </select>
+<script>
+    function f_sel2() {
+        if(v_select.value == "-1") {
+            alert("아 일단 잡숴보라니깐?");
+            return;
+        }
+        // alert(v_select.value); // multiple 아닌 경우에는 간단하다
+        v_iframe.src = v_preUrl + v_mvList[v_select.value] + v_postUrl;
+    }
+
+    function f_sel(p_index) {
+        v_iframe.src = v_preUrl + v_mvList[p_index] + v_postUrl;
+    }
+
+    var v_mvList = ["uG2se-8-BzE","-gXtC_lFIhU","0fN71Wtgoa8","zCsKcT-gcTE","uyC0-MGbDpY","C4z8Ec0HrJA","PRnPQcBwGqk","0kmHEKcRjpo"];
+    var v_preUrl = "https://www.youtube.com/embed/";
+    var v_postUrl = "?autoplay=1&mute=1";
+    var v_index = 0;
+    function f_next() {
+        // iframe의 src 속성에 직접 값을 준다   
+        v_iframe.src = v_preUrl + v_mvList[++v_index] + v_postUrl;
+        if (v_index == v_mvList.length-1) {
+            v_index = -1;
+        }
+    }
+    var v_iframe; // 전역변수로 설정
+    var v_select;
+    // 페이지 로딩 후 초기화가 필요하다면 window.onload에
+    window.onload = function() { // 페이지 로딩이 끝나면 자동으로 실행
+        v_iframe = document.querySelector("#jogi");
+        v_select = document.querySelector("#id_sel");
+    }
+</script>
+    <h2>구글의 정책이 동영상의 자동플레이는 사운드를 꺼야한다</h2>
+    <iframe id="jogi" width="1280" height="720" 
+    src="https://www.youtube.com/embed/uG2se-8-BzE?autoplay=1&mute=1"
+    title="[또 오해영 OST Part 7] 검정치마 - 기다린 만큼, 더 MV" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+</body>
+
+</html>

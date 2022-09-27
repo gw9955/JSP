@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+   1. 스크립트 태그의 세가지 종류에 대해 간단히 설명하시오.<br>
+   - 액션 태그(XML형태의 태그로 jsp페이지사이에서 제어를 이동할 수 있음),<br> 
+   -디렉티브 태그(jsp페이지에 대한 정보를 jsp컨테이너로 보냄), <br>
+   -스크립트 태그(자바 코드를 넣어 프로그램이 수행하는 기능을 구현)<br>
+   <hr />
+   2.선언문 태그와 스크립틀릿 태그의 차이점.
+   - 선언문 태그는 전역변수이고 스크립틀릿 태그는 지역변수.
+   <hr />
+   3.애플리케이션 실행 결과에는 보이지 않는 JSP 주석 표기   법은 무엇인가?
+   - <!--  --> 사이에 넣는다
+   <hr />
+   <%! 
+      String a = "Hello. Java Server Pages";
+   
+      public String getString(String data){
+         return data;
+      }
+   %>
+   <%
+      out.println(a);
+   %>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <booklist>
+    <book isbn="B001" kind="JAVA">
+      <title>25000</title>
+      <autohr/>
+      <price/>
+    </book>
+    <book isbn="B002" kind="JAVA">
+      <title>자바고급</title>
+      <autohr>강감찬</autohr>
+      <price>35000</price>
+    </book>
+    <book isbn="B003" kind="DB">
+      <title>DB설계</title>
+      <autohr>안하용</autohr>
+      <price>45000</price>
+    </book>
+    <book isbn="B004" kind="DB">
+      <title>디비구현</title>
+      <autohr>김연수</autohr>
+      <price>55000</price>
+    </book>
+  </booklist>
+</root>
