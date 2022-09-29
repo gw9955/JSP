@@ -1,0 +1,10 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Implicit Objects</title>
+</head>
+<body>
+	response.sendRedirect("https://www.google.com/webhp?hl=ko&sa=X&ved=0ahUKEwiEm4yZ47n6AhXNet4KHdSsAK8QPAgI");
+</body>
+</html>

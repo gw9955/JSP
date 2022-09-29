@@ -6,10 +6,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:forEach var="k" begin="1" end="10" step="1">
-		<c:if test="${k%2==0}">
-			<span>${k}</span>
-		</c:if>
+	<c:forEach var="k" begin="0" end="10" step="2">
+			<c:out value="${k}"></c:out>
 	</c:forEach>
 </body>
 </html>

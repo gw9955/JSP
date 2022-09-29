@@ -1,0 +1,88 @@
+package homework.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import ch04.vo.BookVO;
+import homework.vo.BookVO;
+
+public class BookRepository {
+	// 싱글톤 패턴
+	// ProductRepository 클래스의 기본 생성자에 대한 객체 변수 instance를 작성한다.
+	private static BookRepository instance = new BookRepository();
+	// 객체 변수 instance에 대한 Getter() 메소드
+	public static BookRepository getInstance() {
+		return instance;
+	}
+	
+	// 상품 목록을 저장하기 위한 List<ProductVO> 객체 타입의 변수
+	private List<BookVO> listOfBook =
+			new ArrayList<BookVO>();
+	
+	// 기본 생성자
+	public BookRepository() {
+		// Smart Phone 상품 추가(1행(BookVO) 추가)
+		// String bookId, String name, int unitPrice
+		BookVO HTML = new BookVO("B1234", "[Hello Coding] HTML5+CSS3", 15000);
+		HTML.setDescription("워드나 PPT 문서를 만들 수 있나요? 그러면 문제 없습니다."
+				+ "지금 바로 웹페이지 제작에 도전해보세요. 지금 당장 컴퓨터가 없어도 괜찮습니다. 코드와 실행 화면이 바로 보여서 눈으...");
+		HTML.setCategory("HTML");
+		HTML.setManufacturer("Apple");
+		HTML.setUnitsInStock(1000);
+		HTML.setCondition("New");
+		
+		listOfBook.add(HTML);
+		
+		// 2) notebook 상품 추가(1행(ProductVO) 추가)
+		BookVO notebook = new BookVO("P1235", "LG PC 그램", 1500000);
+		notebook.setDescription("13.3-inch, IPS LED display");
+		notebook.setCategory("Notebook");
+		notebook.setManufacturer("LG");
+		notebook.setUnitsInStock(1000);
+		notebook.setCondition("Refurbished"); // 재생상품
+		
+		listOfBook.add(notebook);
+		
+		// 3) tablet 상품 추가(1행(ProductVO) 추가)
+		BookVO tablet = new BookVO("P1236", "Galaxy Tab S", 900000);
+		tablet.setDescription("212.8*125.6*6.6mm, Super AMOLED display");
+		tablet.setCategory("Tablet");
+		tablet.setManufacturer("Samsung");
+		tablet.setUnitsInStock(1000);
+		tablet.setCondition("Old"); // 중고상품
+		
+		listOfBook.add(tablet);
+	}
+	
+	// SELECT * FROM PRODUCT
+	// 객체 타입의 변수 listOfProducts 에 저장된 모든 상품 목록을 가져오는 메소드
+	public List<BookVO> getAllBook() {
+		return listOfBook;
+	}
+	
+	// INSERT INTO PRODUCT VALUES(...)
+	// 객체 타입의 변수 listOfProducts에 새로운 상품 정보를 등록하는 메소드
+	public void addBook(BookVO bookvo) {
+		listOfBook.add(bookvo);
+	}
+	
+	// 상세보기 => 1행(ProductVO)을 리턴
+	// SELECT * FROM PRODUCT WHERE PRODUCT_ID = 'P1235'
+	public BookVO getBookById(String bookId) {
+		// 자바빈객체 선언
+		BookVO bookById = null;
+		
+		// listOfProducts의 크기만큼 반복
+		for (int i = 0; i < listOfBook.size(); i++) {
+			BookVO vo = listOfBook.get(i);
+			if (vo!=null&&vo.getBookId()!=null&&vo.getBookId().equals(bookId)) {
+				bookById = vo;
+				// 반복문을 빠져나온다
+				break;
+			}
+		}
+		
+		return bookById;
+		
+	}
+}
