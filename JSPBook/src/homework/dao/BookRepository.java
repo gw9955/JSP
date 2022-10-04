@@ -31,6 +31,7 @@ public class BookRepository {
 		HTML.setUnitsInStock(2000);
 		HTML.setTotalPages(200);
 		HTML.setReleaseDate("2009.06.02");
+		HTML.setFilename("정의란무엇인가.png");
 		
 		listOfBook.add(HTML);
 		
@@ -41,6 +42,7 @@ public class BookRepository {
 		java.setCategory("JAVA");
 		java.setPublisher("한빛아카데미");
 		java.setAuthor("우중중");
+		java.setFilename("돈의심리학.png");
 		
 		listOfBook.add(java);
 		
@@ -51,6 +53,7 @@ public class BookRepository {
 		spring.setCategory("Spring");
 		spring.setPublisher("한빛미디어");
 		spring.setAuthor("하세가와 유이치,오오노 와타루, 토키 코헤미(권은철, 전민수)");
+		spring.setFilename("태엽감는새.png");
 		
 		listOfBook.add(spring);
 	}

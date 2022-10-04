@@ -22,6 +22,7 @@ public class BookVO implements Serializable {
 	private long totalPages; // 페이지 수
 	private String releaseDate; // 출판일(월/년)
 	private String condition; // 신규 도서 or 중고 도서 or E-Book
+	private String filename;
 
 	// 기본 생성자
 	public BookVO() {
@@ -128,12 +129,20 @@ public class BookVO implements Serializable {
 		return serialVersionUID;
 	}
 
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+
 	@Override
 	public String toString() {
 		return "BookVO [bookId=" + bookId + ", name=" + name + ", unitPrice=" + unitPrice + ", author=" + author
 				+ ", description=" + description + ", publisher=" + publisher + ", category=" + category
 				+ ", unitsInStock=" + unitsInStock + ", totalPages=" + totalPages + ", releaseDate=" + releaseDate
-				+ ", condition=" + condition + "]";
+				+ ", condition=" + condition + ", filename=" + filename + "]";
 	}
 
 }

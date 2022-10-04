@@ -1,0 +1,55 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page import="homework.dao.BookRepository"%>
+<%@ page import="java.util.Enumeration"%>
+<%@ page import="homework.vo.BookVO"%>
+<%@ page import="homework.dao.BookRepository"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	
+	String bookId=request.getParameter("bookId");
+	String name=request.getParameter("name");
+	String unitPrice=request.getParameter("unitPrice");
+	String author=request.getParameter("author");
+	String publisher=request.getParameter("publisher");
+	String releaseDate=request.getParameter("releaseDate");
+	String totalPages=request.getParameter("totalPages");
+	String description=request.getParameter("description");
+	String category=request.getParameter("category");
+	String unitInStock=request.getParameter("unitInStock");
+	String condition=request.getParameter("condition");
+	
+	Integer price;
+	
+	if(unitPrice.isEmpty())
+		price=0;
+	else price=Integer.valueOf(unitPrice);
+	
+	long stock;
+	if(unitInStock.isEmpty())
+		stock=0;
+	else stock=Long.valueOf(unitInStock);
+	
+	long pages;
+	if(unitInStock.isEmpty())
+		pages=0;
+	else pages=Long.valueOf(totalPages);
+	
+	
+	BookRepository dao=BookRepository.getInstance();
+	
+	BookRepository book=new BookRepository();
+	book.setbookId(bookId);
+	book.setmame(name);
+	book.setunitPrice(price);
+	book.setauthor(author);
+	book.setpublisher(publisher);
+	book.setreleaseDate(releaseDate);
+	book.settotalPages(pages);
+	book.setdescription(description);
+	book.setcategory(category);
+	book.setunitInStock(unitInStock);
+	book.setcondition(condition);
+	dao.addBook(bookvo);
+	response.sendRedirect("Bookmarketdetail.jsp");
+	
+%>

@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+   1. 파일 업로드를 위한 form 태그 내에 반드시 설정해야 하는 기법은 무엇인가?<br>
+   - form 태그의 method 속성은 반드시 POST 방식으로 설정해야 합니다.<br>
+   - form 태그의 enctype 속성은 반드시 multipart/form-data로 설정해야 합니다.<br>
+   - form 태그의 action 속성은 파일 업로드를 처리할 JSP 파일로 설정해야 합니다.<br>
+   - 폼 처리 결과의 응답을 실행할 프레임을 설정합니다.<br>
+   - 폼을 전송하는 콘텐츠 MIME 유형을 설정합니다.<br>
+   <hr />
+   2. form 태그 내에 중첩하여 사용하는 태그를 나열하고 설명하시오.<br>
+   - input 태그<br>
+    1) input 태그는 사용자가 텍스트 입력이나 선택 등을 다양하게 할 수 있도록 공간을 만드는태그로,<br>
+    	 종료 태그 없이 단독으로 사용할 수 있습니다.<br>
+    	 type="text" / type="button" / type="submit"
+   - select 태그<br>
+    1) select 태그는 여러 개의 항목이 나타나는 목록 상자에서 항목을 선택하는 태그입니다.<br>
+		시작 태그와 종료 태그가 있으며, 리스트 박스에 여러 항목을 추가 삽입하기 위해 반드시<br>
+		option 태그를 포함해야 합니다.<br>
+		selected
+   - textarea 태그<br>
+    1) textarea 태그는 여러 줄의 텍스트를 입력할 수 있는 태그입니다. 가장 큰 특징은 입력 폼<br>
+		안에 사용된 태그와 띄어쓰기가 그대로 출력된다는 것입니다.<br>
+		cols/
+   <hr />
+   3. 폼 페이지에서 전송된 데이터를 전달받는 내장 객체와 관련된 메소드는 무엇인가?<br>
+   - request 내장 객체<br>
+    1) 요청 파라미터의 값 받기 : getParameter(요청 파라미터 이름), getParameterValues<br>
+	2) 요청 파라미터의 전체 값 받기<br>
+		메소드						형식						설명<br>
+	getParameterNames()		java.util.Enumeration		모든 입력 양식의 요청 파라미터 이름을 순서에 상관없이 Enumeration(열거형) 형태로 전달받습니다.<br>
+	hasMoreElements()					Enumeration(열거형)요소가 있으면 true를 반환하고, 그렇지 않으면false를 반환합니다.<br>
+	nextElement()							Enumeration(열거형)요소를 반환합니다.<br>
+   <hr />
+</body>
+</html>
