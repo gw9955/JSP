@@ -243,3 +243,13 @@
 127.0.0.1 - - [04/Oct/2022:20:11:52 +0900] "GET / HTTP/1.1" 404 1074
 0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:11:57 +0900] "GET /homework/1004work/bookmarket.jsp HTTP/1.1" 200 4015
 0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:11:57 +0900] "GET /resources/images/%EC%A0%95%EC%9D%98%EB%9E%80%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80.png HTTP/1.1" 200 52896
+127.0.0.1 - - [04/Oct/2022:20:15:43 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:15:44 +0900] "GET /homework/1004work/bookmarket.jsp HTTP/1.1" 200 4510
+0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:15:44 +0900] "GET /resources/images/%ED%83%9C%EC%97%BD%EA%B0%90%EB%8A%94%EC%83%88.png HTTP/1.1" 200 24096
+0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:15:44 +0900] "GET /resources/images/%EC%A0%95%EC%9D%98%EB%9E%80%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80.png HTTP/1.1" 200 52896
+0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:15:44 +0900] "GET /resources/images/%EB%8F%88%EC%9D%98%EC%8B%AC%EB%A6%AC%ED%95%99.png HTTP/1.1" 200 114560
+0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:15:44 +0900] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:18:33 +0900] "GET /homework/1004work/bookmarket.jsp HTTP/1.1" 200 4510
+0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:18:33 +0900] "GET /resources/images/%EC%A0%95%EC%9D%98%EB%9E%80%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:18:33 +0900] "GET /resources/images/%ED%83%9C%EC%97%BD%EA%B0%90%EB%8A%94%EC%83%88.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Oct/2022:20:18:33 +0900] "GET /resources/images/%EB%8F%88%EC%9D%98%EC%8B%AC%EB%A6%AC%ED%95%99.png HTTP/1.1" 304 -

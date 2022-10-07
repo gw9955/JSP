@@ -34,6 +34,8 @@
 			<!-- List<ProductVO> -> 한 행을 꺼내오면 -> ProductVO -->
 				<!-- vo.멤버변수로 접근 -->
 				<div>
+				<img alt="${bookVO.name}" title="${bookVO.name}"
+							src="/resources/images/${bookVO.filename}" style="width: 150px;">
 				<h3>${bookVO.name}</h3>
 				<p>${bookVO.description}</p>
 				<p>
