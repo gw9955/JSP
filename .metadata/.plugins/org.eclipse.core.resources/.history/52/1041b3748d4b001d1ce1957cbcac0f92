@@ -1,0 +1,7 @@
+package ch12;
+
+import javax.servlet.Filter;
+
+public class LogFileFilter implements Filter {
+
+}

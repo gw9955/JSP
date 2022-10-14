@@ -18,7 +18,7 @@
 </head>
 <body>
 	<!-- 머리글에 해당하는 munu.jsp 파일의 내용을 포함하도록 include액션 태그 작성 -->
-	<jsp:include page="menu.jsp"/>
+	<jsp:include page="/ch06/menu.jsp"/>
 	<div class="jumbotron">
 		<!-- 내용넣기! -->
 		<div class="container">
@@ -42,6 +42,6 @@
 		</div>
 	</div>
 	<!-- =========== 상품목록 끝 ! =========== -->
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="/ch06/footer.jsp" />
 </body>
 </html>

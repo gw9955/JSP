@@ -4690,5 +4690,51 @@
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-
+	<!-- 시큐리티 역할(role) 설정 -->
+	<security-role>
+		<role-name>role1</role-name>
+	</security-role>
+	<security-role>
+		<role-name>tomcat</role-name>
+	</security-role>
+	<!-- 시큐리티의 제약 사항(constraing)을 설정 -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JSPBook</web-resource-name>
+			<url-pattern>/ch10/security01.jsp</url-pattern>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description></description>
+			<role-name>role1</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<!-- /ch10/security02.jsp URL에 접근하려면
+		tomcat 권한(role)을 갖은 id로 로그인 해야 함
+	 -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JSPBook</web-resource-name>
+			<url-pattern>/ch10/security02.jsp</url-pattern>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description></description>
+			<role-name>tomcat</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<!-- 아이디 / 비밀번호를 입력할 수 있는 기본 로그인 창
+		tomcat-users.xml 파일에 등록된 사용자 아이디(both, role1)와 비밀번호를 입력
+	 -->
+	 <!-- 인증(authentication) 처리를 위한 로그인 및 로그인 실패 페이지 설정 -->
+	<login-config>
+<!-- 		<auth-method>BASIC</auth-method> -->
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<!-- 로그인 URL 설정 -->
+			<form-login-page>/ch10/login.jsp</form-login-page>
+			<!-- 인증(로그인) 실패 시 실패 페이지 설정 -->
+			<form-error-page>/ch10/login_failed.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
 </web-app>

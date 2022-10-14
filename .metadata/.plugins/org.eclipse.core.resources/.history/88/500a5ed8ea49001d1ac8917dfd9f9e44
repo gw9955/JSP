@@ -1,0 +1,16 @@
+title=Product Addtion
+bookId=Product ID
+name=Name
+unitPrice=Unit Price
+author=Description
+description=Manufacturer
+publisher=Category
+category=Units in Stock
+unitsInStock=Condition
+totalPages=Image
+releaseDate=New
+condition=Old
+filename=Refurbished
+button=Insert
+productList=Product List
+productOrder=Product Order
