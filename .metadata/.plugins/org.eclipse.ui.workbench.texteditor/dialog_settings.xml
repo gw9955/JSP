@@ -6,16 +6,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Book"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="bookvo"/>
+			<item value="cartlist"/>
+			<item value="productOrder"/>
+			<item value="send"/>
+			<item value="se"/>
+			<item value="right"/>
 			<item value="book"/>
 			<item value="&lt;%@ page contentType=&quot;text/html; charset=UTF-8&quot;%&gt;"/>
-			<item value="test"/>
-			<item value="mem"/>
-			<item value="comm"/>
-			<item value="get"/>
-			<item value="쿠키"/>
-			<item value="cookie"/>
 		</list>
 		<list key="replacehistory">
 			<item value="JDBCUtil3"/>

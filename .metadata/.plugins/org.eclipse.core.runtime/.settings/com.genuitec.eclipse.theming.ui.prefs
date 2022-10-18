@@ -1,13 +1,15 @@
 applyBackground=false
 approved.defs.file.last.changed.time=1649720987000
+codetogether.announce.displayed=true
 configurationInstallLocation=/D\:/B_Util/3.Eclipse/eclipse 2020/
+ct.reengagement.display.after=1676703573980
 ct.upsell.display.after=1665902413133
 eclipse.preferences.version=1
 iconcolormode=primary
 iconreplacement=true
 includeThemingInOomph=false
-last.download.attempt.time=1665724015023
-lastConfiguration=1665737289558
+last.download.attempt.time=1666088521247
+lastConfiguration=1666088516356
 newinstall=false
 showWelcomeDialog=false
 workbench.theme=Dark Gray
