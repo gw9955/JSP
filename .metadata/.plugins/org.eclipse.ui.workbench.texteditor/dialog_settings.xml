@@ -8,14 +8,14 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="pro"/>
+			<item value="produ"/>
+			<item value="product"/>
 			<item value="bookvo"/>
 			<item value="cartlist"/>
 			<item value="productOrder"/>
 			<item value="send"/>
 			<item value="se"/>
-			<item value="right"/>
-			<item value="book"/>
-			<item value="&lt;%@ page contentType=&quot;text/html; charset=UTF-8&quot;%&gt;"/>
 		</list>
 		<list key="replacehistory">
 			<item value="JDBCUtil3"/>
